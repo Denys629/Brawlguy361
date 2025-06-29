@@ -1,25 +1,20 @@
-let cookies = document.cookie.split('; ')
-let isCookieSaved = false //1
-let user_name = ''
-for (let i = 0; i < cookies.length; i += 1) {
-    if (cookies[i].split('-')[2] == 'user-name') {
-        isCookieSaved = false
-        user_name = cookies[i].split('+')[1]
-        break
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3G5YVB4HZY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-if (isCookieSaved) {
-    document.querySelector('.input_field').style.display = 'none'
-    document.querySelector('button').style.display = 'none'
-    document.querySelector('h1').style.display = 'block'
-    document.querySelector('h1').innerHTML = 'Привіт, ' + user_name
-} else {
-    document.querySelector('button').addEventListener('click', function() {
-        document.cookie = `user_name=${document.querySelector('.input_field').value};max-age=5000`
-        document.querySelector('.input_field').style.display = 'none'
-        document.querySelector('button').style.display = 'none'
-        document.querySelector('h1').style.display = 'block'
-        document.querySelector('h1').innerHTML = 'Привіт, ' + document.querySelector('.input_field').value
-    })
-}
+  gtag('config', 'G-3G5YVB4HZY');
+</script>
+</head>
+<body>
+    
+</body>
+</html>
